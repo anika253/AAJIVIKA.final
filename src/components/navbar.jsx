@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <div className="bg-black text-white text-center flex w-full">
       <div className="flex justify-center ml-36 p-4 font-bold text-3xl text-white w-[90vw]">
-        <a href="/">WORK BOOTH</a>
+        <a href="/">AJIVIKA</a>
       </div>
       <div className="pt-5">
         {user ? (
