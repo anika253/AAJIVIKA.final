@@ -1,0 +1,53 @@
+[
+    {
+      "longitude": 78.9629,
+      "latitude": 20.5937,
+      "labourersRequired": 10
+    },
+    {
+      "longitude": 78.9635,
+      "latitude": 20.5940,
+      "labourersRequired": 5
+    },
+    {
+      "longitude": 78.9642,
+      "latitude": 20.5933,
+      "labourersRequired": 15
+    },
+    {
+      "longitude": 78.9620,
+      "latitude": 20.5925,
+      "labourersRequired": 8
+    },
+    {
+      "longitude": 78.9648,
+      "latitude": 20.5938,
+      "labourersRequired": 12
+    },
+    {
+      "longitude": 78.9625,
+      "latitude": 20.5945,
+      "labourersRequired": 7
+    },
+    {
+      "longitude": 78.9650,
+      "latitude": 20.5945,
+      "labourersRequired": 20
+    },
+    {
+      "longitude": 78.9615,
+      "latitude": 20.5930,
+      "labourersRequired": 4
+    },
+    {
+      "longitude": 78.9660,
+      "latitude": 20.5930,
+      "labourersRequired": 9
+    },
+    {
+      "longitude": 78.9630,
+      "latitude": 20.5950,
+      "labourersRequired": 16
+    }
+  ]
+  
