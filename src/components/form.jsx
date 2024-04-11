@@ -12,16 +12,18 @@ function Form() {
   const [name, setName] = useState("");
   const [uidNo, setUidNo] = useState("");
   const [mobileNo, setMobileNo] = useState("");
-
+  const [wages, setWages] = useState(0);
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const coord = urlParams.get("lat");
-    const lat = coord.split(" ")[0];
-    const lng = coord.split(" ")[1].split("=")[1];
-    const nal = coord.split(" ")[2].split("=")[1];
+    const lat = parseFloat(coord.split(" ")[0]).toFixed(3);
+    const lng = parseFloat(coord.split(" ")[1].split("=")[1]).toFixed(3);
+    const nal = coord.split(" ")[3].split("=")[1];
+    const wages = coord.split(" ")[2].split("=")[1];
     if (lat && lng && nal) {
       setApplyingLocation(`${lat}, ${lng}`);
       setNal(nal);
+      setWages(wages);
     }
   }, []);
 
@@ -29,9 +31,8 @@ function Form() {
     event.preventDefault();
     const urlParams = new URLSearchParams(window.location.search);
     const coord = urlParams.get("lat");
-    const ID = coord.split(" ")[3].split("=")[1];
+    const ID = coord.split(" ")[4].split("=")[1];
     try {
-
       const formData = {
         applyingAs,
         numberOfLabourers,
@@ -45,12 +46,12 @@ function Form() {
         return;
       }
 
-      const entriesCollectionRef = collection(db, "filledPosition",ID,"entries");
+      const entriesCollectionRef = collection(db,"filledPosition",ID,"entries");
       await addDoc(entriesCollectionRef, formData);
       toast.success("Hired Successfully");
       let updatedNal = nal - parseInt(numberOfLabourers);
       updatedNal = Math.max(updatedNal, 0);
-      
+
       const locationDocRef = doc(db, "location", ID);
       await updateDoc(locationDocRef, { nal: updatedNal });
     } catch (error) {
@@ -60,12 +61,12 @@ function Form() {
 
   return (
     <div className="flex justify-center">
-    <Toaster
-                toastOptions={{ duration: 4000 }}
-                position="bottom-center"
-                reverseOrder={false}
-              />
-      <div className="flex flex-col w-[70vw] p-3 bg-white rounded-md">
+      <Toaster
+        toastOptions={{ duration: 4000 }}
+        position="bottom-center"
+        reverseOrder={false}
+      />
+      <div className="flex flex-col w-[40vw] p-3 bg-white rounded-md">
         <h2 className="text-2xl text-center font-bold mb-6">
           Application Form
         </h2>
@@ -73,7 +74,7 @@ function Form() {
           <div className="flex w-full">
             <div className="w-1/2 mr-2">
               <label htmlFor="applyingLocation" className="block mb-1">
-                Applying Location:
+                Location (Lat/Lng):
               </label>
               <input
                 type="text"
@@ -91,6 +92,18 @@ function Form() {
                 type="text"
                 id="postavail"
                 value={nal}
+                disabled
+                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-gray-500"
+              />
+            </div>
+            <div className="w-1/2 ml-4">
+              <label htmlFor="applyingLocation" className="block mb-1">
+                Wages:
+              </label>
+              <input
+                type="text"
+                id="wages"
+                value={wages}
                 disabled
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-gray-500"
               />

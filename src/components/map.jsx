@@ -10,7 +10,7 @@ import { collection, getDocs } from 'firebase/firestore';
 export default function Map() {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [zoom] = useState(14);
+  const [zoom] = useState(10);
   const [API_KEY] = useState('4OjFkG91zRTKmrnLHyBh');
   const [mapController, setMapController] = useState();
   const [markersData, setMarkersData] = useState([]);
@@ -21,7 +21,7 @@ export default function Map() {
     map.current = new maplibregl.Map({
       container: mapContainer.current,
       style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${API_KEY}`,
-      center: [78.9629, 20.5937], // Default center
+      center: [76.5213,31.6862], // Default center
       zoom: zoom
     });
 
@@ -48,6 +48,7 @@ export default function Map() {
           lat: data.lat,
           lng: data.lng,
           nal: data.nal,
+          wages: data.wages
         });
       });
       setMarkersData(locations);
@@ -67,7 +68,8 @@ export default function Map() {
       const popupContent = `
         <div>
           <p>No. of Labourers Required: ${marker.nal}</p>
-          <a href='/form?lat=${marker.lat}+lng=${marker.lng}+nal=${marker.nal}+ID=${marker.ID}'>Open Form</a>
+          <p>Wages: Rs. ${marker.wages}</p>
+          <a href='/form?lat=${marker.lat}+lng=${marker.lng}+wages=${marker.wages}+nal=${marker.nal}+ID=${marker.ID}'>Open Form</a>
         </div>
       `;
 
