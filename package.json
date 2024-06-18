@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@maptiler/geocoding-control": "^1.2.2",
-    "@maptiler/sdk": "^2.0.1",
+    "@maptiler/sdk": "^1.2.1",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.6.8",
     "firebase": "^10.10.0",
