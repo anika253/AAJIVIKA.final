@@ -16,23 +16,6 @@ Underemployment: Many work in jobs that don't utilize their full potential
 
 Geographic limitations: Rural populations face disproportionate challenges
 
-💡 Our Solution
-AAJIVIKA.final revolutionizes livelihood access through:
-
-Key Features
-Smart Job Matching: AI-powered recommendations based on skills, location, and potential
-
-Skill Development Portal: Free micro-courses for in-demand skills
-
-Gig Economy Integration: Access to flexible work opportunities
-
-Community Support Network: Peer mentoring and support groups
-
-Employer Dashboard: Tools for businesses to engage with diverse talent
-
-Mobile-First Design: Accessible on low-end smartphones with limited data
-
-Local Language Support: Breaking language barriers to opportunity
 
 🛠️ Technical Stack
 AAJIVIKA.final leverages cutting-edge technologies to deliver a robust, scalable solution:
@@ -55,15 +38,11 @@ Redis for caching and performance optimization
 
 
 # Clone the repository
-git clone https://github.com/your-org/AAJIVIKA.final.git
-
 # Install dependencies
 cd AAJIVIKA.final
 npm install
-
 # Set up environment variables
 cp .env.example .env
-
 # Start development server
 npm run dev
 🤝 How to Contribute
