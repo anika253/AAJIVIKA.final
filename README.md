@@ -1,61 +1,180 @@
-🌟 Introduction
-AAJIVIKA.final is a transformative full-stack web application designed to bridge the employment gap for unemployed and partially employed individuals in our society. This platform goes beyond traditional job portals by creating an ecosystem that empowers, educates, and connects disadvantaged job seekers with meaningful livelihood opportunities.
 
-In a world where 190 million people are unemployed globally (ILO 2023), AAJIVIKA.final provides a comprehensive solution that addresses the unique challenges faced by vulnerable sections of society - including skill gaps, limited digital literacy, and lack of access to formal employment networks.
+# 🌱 AAJIVIKA.final
 
-🎯 Problem Statement
-The current employment landscape presents several critical challenges:
+**AAJIVIKA.final** is a transformative full-stack web application designed to bridge the employment gap for unemployed and underemployed individuals. More than just a job portal, it serves as a digital ecosystem to empower, educate, and connect marginalized job seekers with meaningful livelihood opportunities.
 
-Structural unemployment: Many lack access to formal job markets
+🌐 **Live Site:** [https://aajivika-final.vercel.app](https://aajivika-final.vercel.app)
 
-Skill mismatch: Existing skills don't align with market demands
+---
 
-Digital divide: Limited tech access creates barriers to opportunity
+## 📘 Introduction
 
-Underemployment: Many work in jobs that don't utilize their full potential
+In a world where **190 million people are unemployed globally** (ILO, 2023), AAJIVIKA.final addresses systemic barriers to employment, including:
 
-Geographic limitations: Rural populations face disproportionate challenges
+- Limited access to formal job networks
+- Mismatched skillsets and lack of training
+- Digital illiteracy
+- Rural isolation and geographic challenges
 
+---
 
-🛠️ Technical Stack
-AAJIVIKA.final leverages cutting-edge technologies to deliver a robust, scalable solution:
+## 🎯 Problem Statement
 
-Frontend:
+This project tackles critical employment challenges:
 
-React.js with Redux for state management
+- **Structural Unemployment** – Lack of access to formal job markets  
+- **Skill Mismatch** – Inadequate alignment with current job demands  
+- **Digital Divide** – Limited exposure to tech-enabled opportunities  
+- **Underemployment** – Wasted potential in mismatched roles  
+- **Geographic Barriers** – Disproportionate rural hardships  
 
-Tailwind CSS for responsive, accessible UI
+---
 
-Progressive Web App (PWA) capabilities for offline access
+## 🛠️ Tech Stack
 
-Backend:
+### 🚀 Frontend
 
-Node.js with Express.js framework
+- **React.js** – Modern component-based UI
+- **Redux** – Robust state management
+- **React Router DOM** – Seamless client-side routing
+- **Tailwind CSS** – Utility-first styling for responsive UI
+- **PWA Support** – Offline-capable experience
 
-MongoDB for flexible data storage
+### ⚙️ Backend (optional setup)
 
-Redis for caching and performance optimization
+- **Node.js** – JavaScript runtime
+- **Express.js** – Minimalist backend framework
+- **MongoDB** – NoSQL database
+- **Redis** – High-performance in-memory cache
 
+### 🗺️ Mapping Tools
 
-# Clone the repository
-# Install dependencies
+- **MapLibre GL JS** – Open-source vector maps
+- **@maptiler/sdk & @maptiler/geocoding-control** – Location search, geocoding
+
+---
+
+## 📁 Project Structure
+
+```
+AAJIVIKA.final/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Map.jsx        ← MapLibre integration
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   └── ...
+│   ├── firebase.config.js
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+```
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 🔁 Clone the Repository
+
+```bash
+git clone https://github.com/anika253/AAJIVIKA.final.git
 cd AAJIVIKA.final
+```
+
+### 📦 Install Dependencies
+
+```bash
 npm install
-# Set up environment variables
+```
+
+### ⚙️ Set Up Environment Variables
+
+```bash
 cp .env.example .env
-# Start development server
+```
+
+> Replace placeholder values in `.env` with your Firebase and API credentials.
+
+### 🚀 Run the Development Server
+
+```bash
 npm run dev
-🤝 How to Contribute
-We welcome contributions from developers passionate about social impact:
+```
 
-Fork the repository
+Visit: [http://localhost:5173](http://localhost:5173)
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+---
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
+## 🧱 Build for Production
 
-Push to the branch (git push origin feature/AmazingFeature)
+```bash
+npm run build
+```
 
-Open a Pull Request
+Build files will be generated in the `dist/` directory.
 
+---
 
+## ☁️ Deployment
+
+### ✅ Vercel (Frontend Deployment)
+
+- Live Site: [https://aajivika-final.vercel.app](https://aajivika-final.vercel.app)
+- Framework Preset: **Vite**
+- Output Directory: **dist**
+
+### 🔧 Render (Backend – optional)
+
+If backend is hosted separately:
+
+- **Root Directory:** `backend/` (if applicable)
+- **Build Command:** `npm install`
+- **Start Command:** `npm start`
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from developers passionate about social good.
+
+1. Fork the repository  
+2. Create your feature branch  
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. Commit your changes  
+   ```bash
+   git commit -m 'Add AmazingFeature'
+   ```
+4. Push to your branch  
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. Open a Pull Request
+
+---
+
+## 👥 Contributors
+
+- 💡 [Anika Sharma](https://github.com/anika253)
+- 🧠 [Abhishek Kumar](https://github.com/abhi-kumar17871)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 📝 Acknowledgements
+
+- [MapLibre GL JS](https://maplibre.org/)
+- [MapTiler](https://www.maptiler.com/)
+- [Vercel](https://vercel.com/)
+- [Render](https://render.com/)
