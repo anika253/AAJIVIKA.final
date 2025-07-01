@@ -164,13 +164,11 @@ We welcome contributions from developers passionate about social good.
 - 💡 [Anika Sharma](https://github.com/anika253)
 - 🧠 [Abhishek Kumar](https://github.com/abhi-kumar17871)
 
----
 
-## 📄 License
 
-This project is licensed under the **MIT License**.
 
----
+
+
 
 ## 📝 Acknowledgements
 
